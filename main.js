@@ -21,7 +21,7 @@ const reverseString2 = (text) => {
 const isPolidorme = (word) => {
   return word === word.split("").reverse().join("") ? true : false;
 };
-console.log(isPolidorme("kajak"));
+// console.log(isPolidorme("kajak"));
 
 const isPolidorme2 = (word) => {
   for (let i = 0; i < Math.floor(word.length / 2); i++) {
@@ -32,6 +32,16 @@ const isPolidorme2 = (word) => {
   }
   return true;
 };
-console.log(isPolidorme2("kajakk"));
+// console.log(isPolidorme2("kajakk"));
+
+//
+// Reverse int
+const reverseInt = (number) => {
+  let belowZero = number < 0 ? true : false;
+  let word = String(Math.abs(number));
+  word = word.split("").reverse().join("");
+  return belowZero ? `-${Number(word)}` : Number(word);
+};
+// console.log(reverseInt(-90));
 
 //git push -u origin main
