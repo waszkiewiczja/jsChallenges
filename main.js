@@ -44,4 +44,30 @@ const reverseInt = (number) => {
 };
 // console.log(reverseInt(-90));
 
+//
+//Make object
+const makeObject = (text) => {
+  const chars = {};
+  for (let i = 0; i < text.length; i++) {
+    if (chars[text[i]]) {
+      chars[text[i]] += 1;
+    } else {
+      chars[text[i]] = 1;
+    }
+  }
+
+  let max = 0;
+  let maxChar = "";
+
+  for (let key in chars) {
+    let value = chars[key];
+    if (value > max) {
+      max = value;
+      maxChar = key;
+    }
+  }
+  return maxChar;
+};
+// console.log(makeObject("taakkk"));
+
 //git push -u origin main
