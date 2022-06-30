@@ -70,4 +70,15 @@ const makeObject = (text) => {
 };
 // console.log(makeObject("taakkk"));
 
+//
+// Delete vowels
+function disemvowel(str) {
+  let cojest = str.match(/[^ua]/gi);
+  if (cojest) {
+    return str.match(/[^aeiou]/gi).join("");
+  } else {
+    return "";
+  }
+}
+
 //git push -u origin main
