@@ -110,3 +110,14 @@ const arrayChunk = (arr, size) => {
   return chunked;
 };
 // console.log(arrayChunk([1, 2, 3, 4, 5], 2));
+
+//
+// Capitalize
+const capitlaize = (text) => {
+  const words = [];
+  for (let word of text.split(" ")) {
+    words.push(word[0] + word.slice(1));
+  }
+  return words.join(" ");
+};
+// console.log(capitlaize("tak nie moze"));
